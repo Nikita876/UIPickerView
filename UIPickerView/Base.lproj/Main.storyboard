@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UIPickerView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ASL-97-1Od">
+                                <rect key="frame" x="70" y="69" width="274" height="32"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <connections>
+                                    <action selector="choiceSegment:" destination="BYZ-38-t0r" eventType="valueChanged" id="KDV-fT-d8i"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifu-Ob-RJd">
+                                <rect key="frame" x="70" y="141" width="274" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="4fz-W2-tCU">
+                                <rect key="frame" x="68" y="204" width="278" height="31"/>
+                                <connections>
+                                    <action selector="sliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="StY-LG-h3f"/>
+                                </connections>
+                            </slider>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="5fP-gc-sQb">
+                                <rect key="frame" x="70" y="349" width="274" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UNy-rY-G0Z">
+                                <rect key="frame" x="70" y="468" width="274" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MkJ-Ij-jD7"/>
+                                </connections>
+                            </button>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="w7V-NY-d92">
+                                <rect key="frame" x="0.0" y="533" width="414" height="216"/>
+                                <connections>
+                                    <action selector="datePickerAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="Y8o-0C-H4z"/>
+                                </connections>
+                            </datePicker>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="iD1-XW-ySW">
+                                <rect key="frame" x="343" y="792" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="vuI-97-R1S"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Скрыть все элементы!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oYK-zq-0Cn">
+                                <rect key="frame" x="70" y="792" width="239" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="BfV-Fp-PSQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.55294117649999996" green="0.87843137250000003" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="UNy-rY-G0Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="1kd-WS-xZS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ASL-97-1Od" secondAttribute="trailing" constant="70" id="53s-sH-hGK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4fz-W2-tCU" secondAttribute="trailing" constant="70" id="7uI-bK-mKN"/>
+                            <constraint firstItem="5fP-gc-sQb" firstAttribute="top" secondItem="4fz-W2-tCU" secondAttribute="bottom" constant="115" id="AMS-fj-sAA"/>
+                            <constraint firstItem="iD1-XW-ySW" firstAttribute="top" secondItem="w7V-NY-d92" secondAttribute="bottom" constant="43" id="Etj-JP-dW7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UNy-rY-G0Z" secondAttribute="trailing" constant="70" id="GwH-VM-U1C"/>
+                            <constraint firstItem="oYK-zq-0Cn" firstAttribute="top" secondItem="w7V-NY-d92" secondAttribute="bottom" constant="43" id="HYH-j8-o8e"/>
+                            <constraint firstItem="ifu-Ob-RJd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="I3J-DN-CAi"/>
+                            <constraint firstItem="ifu-Ob-RJd" firstAttribute="top" secondItem="ASL-97-1Od" secondAttribute="bottom" constant="41" id="J5u-6j-SKU"/>
+                            <constraint firstItem="ASL-97-1Od" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="ZL1-Jf-h49"/>
+                            <constraint firstItem="iD1-XW-ySW" firstAttribute="leading" secondItem="oYK-zq-0Cn" secondAttribute="trailing" constant="34" id="ZvV-NF-pMR"/>
+                            <constraint firstItem="w7V-NY-d92" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dTf-p3-QNz"/>
+                            <constraint firstItem="w7V-NY-d92" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ddc-ta-CJt"/>
+                            <constraint firstItem="4fz-W2-tCU" firstAttribute="top" secondItem="ifu-Ob-RJd" secondAttribute="bottom" constant="42" id="emf-7h-hjZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5fP-gc-sQb" secondAttribute="trailing" constant="70" id="jRk-T9-zZ1"/>
+                            <constraint firstItem="w7V-NY-d92" firstAttribute="top" secondItem="UNy-rY-G0Z" secondAttribute="bottom" constant="35" id="kOg-2z-0oo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iD1-XW-ySW" secondAttribute="trailing" constant="22" id="l4K-C5-Zaj"/>
+                            <constraint firstItem="4fz-W2-tCU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="n0g-2K-yPY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ifu-Ob-RJd" secondAttribute="trailing" constant="70" id="n4w-4j-Xm7"/>
+                            <constraint firstItem="5fP-gc-sQb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="su8-J3-kIF"/>
+                            <constraint firstItem="UNy-rY-G0Z" firstAttribute="top" secondItem="5fP-gc-sQb" secondAttribute="bottom" constant="85" id="wra-Fh-7UM"/>
+                            <constraint firstItem="ASL-97-1Od" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="xuE-fu-Lpw"/>
+                            <constraint firstItem="oYK-zq-0Cn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="yS3-o6-l1a"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="UNy-rY-G0Z" id="Var-4v-dWW"/>
+                        <outlet property="datePicker" destination="w7V-NY-d92" id="56w-61-JQl"/>
+                        <outlet property="label" destination="ifu-Ob-RJd" id="uzz-6R-ylJ"/>
+                        <outlet property="labelForSwitch" destination="oYK-zq-0Cn" id="LqT-eb-p1V"/>
+                        <outlet property="segmentedControl" destination="ASL-97-1Od" id="Gqp-fN-CKq"/>
+                        <outlet property="slider" destination="4fz-W2-tCU" id="fjL-3S-pGw"/>
+                        <outlet property="switchElement" destination="iD1-XW-ySW" id="B8D-ie-uf4"/>
+                        <outlet property="textField" destination="5fP-gc-sQb" id="aXl-1B-8je"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1.4492753623188408" y="57.589285714285708"/>
+        </scene>
+    </scenes>
+</document>
